@@ -1,5 +1,5 @@
 require './app'
 
-set :file_root, "/home/igor" 
+set :file_root, "." 
 
 run Sinatra::Application
