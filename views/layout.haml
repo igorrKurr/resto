@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Simple File Browser
+    %link{ rel: "icon", type: "image/ico", href: "/favicon.ico" }
+    %link{ href: "/bootstrap/css/bootstrap.css", rel: "stylesheet" }
+    %link{ href: "/css/custom.css", rel: "stylesheet" }
+    %script{ src: "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js" }
+    %script{ src: "/js/app.js" }
+
+  %body{ "ng-app" => "myApp" }
+    .container
+      .row
+        %div.page-header
+          %h1 Simple File Browser App
+        = yield
+    = haml :footer

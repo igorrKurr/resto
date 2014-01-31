@@ -1,0 +1,14 @@
+%div{ "ng-controller" => "MyCtrl" }
+  %div{ "ng-repeat" => "item in items" }
+    %span{ class:"glyphicon glyphicon-folder-open" }  
+    {{ item.current }}
+    %ul.list-group
+      %li{ "ng-click" => "getEntries(item.parent)", class: "list-group-item" }..
+      %li{ "ng-repeat" => "d in item.dir", class: "list-group-item" } 
+        %span{ "ng-click" => "getEntries(d.path)", id: "highlight" } 
+          %span{ class:"glyphicon glyphicon-folder-close" }  
+          {{ d.name }}
+      %li{ "ng-repeat" => "f in item.file", class: "list-group-item" }
+        %span{ class:"glyphicon glyphicon-file" }  
+        {{ f.name }}
+      
